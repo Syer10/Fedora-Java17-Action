@@ -1,0 +1,14 @@
+# action.yml
+name: 'Fedora 35 with Java 17'
+description: 'Docker container for building on Fedora 35 with Java 17'
+
+inputs:
+  command:
+    description: 'Command to run'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
